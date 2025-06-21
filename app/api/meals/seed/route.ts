@@ -7,10 +7,10 @@ export async function GET(req: NextRequest) {
   try {
     await connectDB();
 
-    // Delete old meals (optional)
+    // Optional: Delete existing data
     await Meal.deleteMany({});
 
-    // Insert new meals
+    // Insert meals
     const inserted = await Meal.insertMany(mealsData);
 
     return NextResponse.json({ message: "Meals seeded", count: inserted.length });

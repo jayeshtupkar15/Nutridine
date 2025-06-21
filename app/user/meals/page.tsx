@@ -3,13 +3,15 @@
 import React, { useEffect, useState } from "react";
 
 interface Meal {
-  _id: string;
+  _id?: string;
   title: string;
   calories: number;
   nutritionInfo: string;
   image: string;
-  category: string;
+  category?: string;
   description?: string;
+  ingredients?: string[];
+  instructions?: string[];
 }
 
 const categories = ["All", "High Protein", "Low Carb", "Vegan", "Weight Loss", "Muscle Gain"];
@@ -24,15 +26,13 @@ export default function MealsPage() {
   const [showFavorites, setShowFavorites] = useState(false);
   const [selectedMeal, setSelectedMeal] = useState<Meal | null>(null);
 
-  // Pagination
-  const [currentPage, setCurrentPage] = useState(1);
-  const mealsPerPage = 6;
-
-  // AI Filters
   const [goal, setGoal] = useState("");
   const [diet, setDiet] = useState("");
   const [minCal, setMinCal] = useState("");
   const [maxCal, setMaxCal] = useState("");
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const mealsPerPage = 6;
 
   useEffect(() => {
     const fetchMeals = async () => {
@@ -62,7 +62,7 @@ export default function MealsPage() {
     let filtered = meals;
 
     if (showFavorites) {
-      filtered = meals.filter((meal) => favorites.includes(meal._id));
+      filtered = meals.filter((meal) => meal._id && favorites.includes(meal._id));
     } else {
       if (selectedCategory !== "All") {
         filtered = filtered.filter((meal) => meal.category === selectedCategory);
@@ -75,7 +75,7 @@ export default function MealsPage() {
     }
 
     setFilteredMeals(filtered);
-    setCurrentPage(1); // reset page on filter change
+    setCurrentPage(1);
   }, [search, selectedCategory, meals, showFavorites, favorites]);
 
   const paginatedMeals = filteredMeals.slice(
@@ -91,23 +91,15 @@ export default function MealsPage() {
 
       {/* AI Recommendations */}
       <div className="bg-white p-6 rounded-xl shadow-lg mb-10">
-        <h2 className="text-2xl font-bold text-slate-800 mb-4">Get AI-Powered Meal Recommendations</h2>
+        <h2 className="text-2xl font-bold mb-4 text-slate-800">Get AI-Powered Meal Recommendations</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-          <select
-            className="px-4 py-2 border rounded-md"
-            value={goal}
-            onChange={(e) => setGoal(e.target.value)}
-          >
+          <select className="px-4 py-2 border rounded-md" value={goal} onChange={(e) => setGoal(e.target.value)}>
             <option value="">Select Goal</option>
             <option value="Weight Loss">Weight Loss</option>
             <option value="Muscle Gain">Muscle Gain</option>
           </select>
 
-          <select
-            className="px-4 py-2 border rounded-md"
-            value={diet}
-            onChange={(e) => setDiet(e.target.value)}
-          >
+          <select className="px-4 py-2 border rounded-md" value={diet} onChange={(e) => setDiet(e.target.value)}>
             <option value="">Select Diet Type</option>
             <option value="Vegan">Vegan</option>
             <option value="Low Carb">Low Carb</option>
@@ -130,6 +122,7 @@ export default function MealsPage() {
             />
           </div>
         </div>
+
         <button
           className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
           onClick={async () => {
@@ -226,21 +219,17 @@ export default function MealsPage() {
                 <button
                   onClick={() =>
                     setFavorites((prev) =>
-                      prev.includes(meal._id)
-                        ? prev.filter((id) => id !== meal._id)
-                        : [...prev, meal._id]
+                      prev.includes(meal._id!) ? prev.filter((id) => id !== meal._id) : [...prev, meal._id!]
                     )
                   }
                   className="absolute top-3 right-3 text-xl bg-white/80 text-green-600 rounded-full p-2 hover:bg-white transition"
                 >
-                  {favorites.includes(meal._id) ? "💚" : "🤍"}
+                  {favorites.includes(meal._id!) ? "💚" : "🤍"}
                 </button>
 
                 <div className="p-5">
                   <h3 className="text-xl font-semibold text-slate-800">{meal.title}</h3>
-                  <p className="text-slate-600 mt-2">
-                    {meal.calories} kcal • {meal.nutritionInfo}
-                  </p>
+                  <p className="text-slate-600 mt-2">{meal.calories} kcal • {meal.nutritionInfo}</p>
                   <p className="text-sm mt-1 text-green-600 font-medium">{meal.category}</p>
                   <button
                     className="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition w-full"
@@ -253,7 +242,7 @@ export default function MealsPage() {
             ))}
           </div>
 
-          {/* Pagination Controls */}
+          {/* Pagination */}
           {filteredMeals.length > mealsPerPage && (
             <div className="flex justify-center mt-10 space-x-2">
               <button
@@ -263,7 +252,6 @@ export default function MealsPage() {
               >
                 Prev
               </button>
-
               {Array.from({ length: Math.ceil(filteredMeals.length / mealsPerPage) }, (_, i) => i + 1).map(
                 (page) => (
                   <button
@@ -279,12 +267,9 @@ export default function MealsPage() {
                   </button>
                 )
               )}
-
               <button
                 onClick={() =>
-                  setCurrentPage((prev) =>
-                    Math.min(prev + 1, Math.ceil(filteredMeals.length / mealsPerPage))
-                  )
+                  setCurrentPage((prev) => Math.min(prev + 1, Math.ceil(filteredMeals.length / mealsPerPage)))
                 }
                 disabled={currentPage === Math.ceil(filteredMeals.length / mealsPerPage)}
                 className="px-4 py-2 bg-green-500 text-white rounded disabled:opacity-50"
@@ -299,29 +284,42 @@ export default function MealsPage() {
       {/* Modal */}
       {selectedMeal && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center">
-          <div className="bg-white w-[90%] max-w-xl rounded-lg shadow-lg p-6 text-black relative">
+          <div className="bg-white w-[90%] max-w-xl rounded-lg shadow-lg p-6 text-black relative overflow-y-auto max-h-[90vh]">
             <button
               className="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl"
               onClick={() => setSelectedMeal(null)}
             >
               ✖
             </button>
-            <img
-              src={selectedMeal.image}
-              alt={selectedMeal.title}
-              className="w-full h-60 object-cover rounded-md mb-4"
-            />
+
+            <img src={selectedMeal.image} alt={selectedMeal.title} className="w-full h-60 object-cover rounded-md mb-4" />
             <h2 className="text-2xl font-bold mb-2">{selectedMeal.title}</h2>
-            <p className="text-gray-700 mb-1">
-              <strong>Calories:</strong> {selectedMeal.calories}
-            </p>
-            <p className="text-gray-700 mb-1">
-              <strong>Nutrition:</strong> {selectedMeal.nutritionInfo}
-            </p>
-            <p className="text-gray-600 mt-4">
-              {selectedMeal.description ||
-                "This meal is crafted to support your wellness goals. More info coming soon."}
-            </p>
+            <p className="text-gray-700 mb-1"><strong>Calories:</strong> {selectedMeal.calories}</p>
+            <p className="text-gray-700 mb-1"><strong>Nutrition:</strong> {selectedMeal.nutritionInfo}</p>
+            {selectedMeal.category && <p className="text-green-600 font-medium mb-3">{selectedMeal.category}</p>}
+            <p className="text-gray-600 mb-4">{selectedMeal.description}</p>
+
+            {selectedMeal.ingredients && (
+              <>
+                <h3 className="text-lg font-semibold mt-4 mb-2">Ingredients:</h3>
+                <ul className="list-disc list-inside text-sm text-gray-700">
+                  {selectedMeal.ingredients.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {selectedMeal.instructions && (
+              <>
+                <h3 className="text-lg font-semibold mt-4 mb-2">Instructions:</h3>
+                <ol className="list-decimal list-inside text-sm text-gray-700 space-y-1">
+                  {selectedMeal.instructions.map((step, index) => (
+                    <li key={index}>{step}</li>
+                  ))}
+                </ol>
+              </>
+            )}
           </div>
         </div>
       )}

@@ -3,36 +3,124 @@
     "title": "Grilled Chicken Salad",
     "calories": 350,
     "nutritionInfo": "High Protein, Low Carb",
-    "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+    "image": "https://www.berlyskitchen.com/wp-content/uploads/2022/04/Grilled-Chicken-Salad-Featured-Image.jpg",
+    "description": "A healthy salad packed with grilled chicken and fresh vegetables, perfect for a high-protein, low-carb meal.",
+    "ingredients": [
+      "200g grilled chicken breast",
+      "2 cups mixed lettuce",
+      "1/2 cucumber, sliced",
+      "1/4 cup cherry tomatoes",
+      "1 tbsp olive oil",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Grill the chicken breast until fully cooked and slice into strips.",
+      "In a large bowl, mix lettuce, cucumber, and cherry tomatoes.",
+      "Add grilled chicken on top.",
+      "Drizzle with olive oil and season with salt and pepper.",
+      "Toss and serve immediately."
+    ]
   },
   {
     "title": "Avocado Toast",
     "calories": 250,
     "nutritionInfo": "Healthy Fats, Fiber",
-    "image": "https://images.pexels.com/photos/1640776/pexels-photo-1640776.jpeg"
+    "image": "https://images.pexels.com/photos/1640776/pexels-photo-1640776.jpeg",
+    "description": "Creamy avocado on toasted whole grain bread. A great way to start your day with fiber and healthy fats.",
+    "ingredients": [
+      "1 slice whole grain bread",
+      "1 ripe avocado",
+      "1 tsp lemon juice",
+      "Salt and chili flakes to taste"
+    ],
+    "instructions": [
+      "Toast the bread to your liking.",
+      "Mash the avocado with lemon juice, salt, and chili flakes.",
+      "Spread the mashed avocado on the toast.",
+      "Serve immediately."
+    ]
   },
   {
     "title": "Veggie Stir Fry",
     "calories": 400,
     "nutritionInfo": "Vegan, Low Fat",
-    "image": "https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg"
+    "image": "https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg",
+    "description": "A colorful mix of vegetables sautéed in light soy sauce. Vegan, low-fat, and full of flavor.",
+    "ingredients": [
+      "1/2 cup broccoli florets",
+      "1/2 bell pepper, sliced",
+      "1/4 cup carrots, julienned",
+      "1/4 cup snap peas",
+      "1 tbsp soy sauce",
+      "1 tsp olive oil",
+      "Garlic and ginger, minced"
+    ],
+    "instructions": [
+      "Heat oil in a pan and sauté garlic and ginger for 1 minute.",
+      "Add all vegetables and stir fry for 5-7 minutes.",
+      "Add soy sauce and cook for another 2 minutes.",
+      "Serve hot with or without rice."
+    ]
   },
   {
     "title": "Quinoa Salad",
     "calories": 320,
     "nutritionInfo": "Gluten-Free, High Fiber",
-    "image": "https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg"
+    "image": "https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg",
+    "description": "A light and nutritious quinoa salad loaded with fiber and fresh vegetables.",
+    "ingredients": [
+      "1 cup cooked quinoa",
+      "1/2 cucumber, diced",
+      "1/4 cup cherry tomatoes, halved",
+      "2 tbsp chopped parsley",
+      "1 tbsp olive oil",
+      "1 tsp lemon juice",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "In a large bowl, mix quinoa, cucumber, tomatoes, and parsley.",
+      "Add olive oil and lemon juice.",
+      "Season with salt and pepper.",
+      "Toss everything together and serve chilled."
+    ]
   },
   {
     "title": "Fruit Smoothie",
     "calories": 180,
     "nutritionInfo": "Rich in Vitamins",
-    "image": "https://images.pexels.com/photos/4040660/pexels-photo-4040660.jpeg"
+    "image": "https://images.pexels.com/photos/4040660/pexels-photo-4040660.jpeg",
+    "description": "A refreshing fruit smoothie rich in vitamins and antioxidants.",
+    "ingredients": [
+      "1 banana",
+      "1/2 cup strawberries",
+      "1/2 cup blueberries",
+      "1/2 cup Greek yogurt",
+      "1/2 cup almond milk",
+      "1 tsp honey (optional)"
+    ],
+    "instructions": [
+      "Add all ingredients to a blender.",
+      "Blend until smooth.",
+      "Pour into a glass and serve immediately."
+    ]
   },
   {
     "title": "Grilled Salmon",
     "calories": 500,
     "nutritionInfo": "Omega-3 Rich, Protein Packed",
-    "image": "https://images.pexels.com/photos/3296273/pexels-photo-3296273.jpeg"
+    "image": "https://images.pexels.com/photos/3296273/pexels-photo-3296273.jpeg",
+    "description": "Delicious grilled salmon rich in omega-3 fatty acids and protein. Perfect for muscle recovery.",
+    "ingredients": [
+      "1 salmon fillet (about 200g)",
+      "1 tbsp olive oil",
+      "1 tsp lemon juice",
+      "Salt, pepper, and herbs of your choice"
+    ],
+    "instructions": [
+      "Preheat grill to medium-high heat.",
+      "Brush salmon with olive oil, lemon juice, salt, and herbs.",
+      "Grill skin-side down for 5-6 minutes, then flip and grill 3-4 minutes more.",
+      "Serve with steamed vegetables or a salad."
+    ]
   }
 ]
