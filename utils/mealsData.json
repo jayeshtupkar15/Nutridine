@@ -4,40 +4,33 @@
     "calories": 350,
     "nutritionInfo": "High Protein, Low Carb",
     "image": "https://www.berlyskitchen.com/wp-content/uploads/2022/04/Grilled-Chicken-Salad-Featured-Image.jpg",
-    "description": "A healthy salad packed with grilled chicken and fresh vegetables, perfect for a high-protein, low-carb meal.",
+    "description": "Lean grilled chicken served over fresh greens, ideal for high-protein, low-carb diets.",
     "ingredients": [
-      "200g grilled chicken breast",
-      "2 cups mixed lettuce",
-      "1/2 cucumber, sliced",
-      "1/4 cup cherry tomatoes",
-      "1 tbsp olive oil",
-      "Salt and pepper to taste"
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
     ],
     "instructions": [
-      "Grill the chicken breast until fully cooked and slice into strips.",
-      "In a large bowl, mix lettuce, cucumber, and cherry tomatoes.",
-      "Add grilled chicken on top.",
-      "Drizzle with olive oil and season with salt and pepper.",
-      "Toss and serve immediately."
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
     ]
   },
   {
     "title": "Avocado Toast",
     "calories": 250,
     "nutritionInfo": "Healthy Fats, Fiber",
-    "image": "https://images.pexels.com/photos/1640776/pexels-photo-1640776.jpeg",
-    "description": "Creamy avocado on toasted whole grain bread. A great way to start your day with fiber and healthy fats.",
+    "image": "https://www.jessicagavin.com/wp-content/uploads/2020/07/avocado-toast-7.jpg",
+    "description": "Whole grain toast topped with smashed avocado, a heart-healthy and fiber-rich breakfast.",
     "ingredients": [
-      "1 slice whole grain bread",
-      "1 ripe avocado",
-      "1 tsp lemon juice",
-      "Salt and chili flakes to taste"
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
     ],
     "instructions": [
-      "Toast the bread to your liking.",
-      "Mash the avocado with lemon juice, salt, and chili flakes.",
-      "Spread the mashed avocado on the toast.",
-      "Serve immediately."
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
     ]
   },
   {
@@ -45,21 +38,16 @@
     "calories": 400,
     "nutritionInfo": "Vegan, Low Fat",
     "image": "https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg",
-    "description": "A colorful mix of vegetables sautéed in light soy sauce. Vegan, low-fat, and full of flavor.",
+    "description": "Colorful vegetables stir-fried with soy sauce, perfect for a low-fat vegan meal.",
     "ingredients": [
-      "1/2 cup broccoli florets",
-      "1/2 bell pepper, sliced",
-      "1/4 cup carrots, julienned",
-      "1/4 cup snap peas",
-      "1 tbsp soy sauce",
-      "1 tsp olive oil",
-      "Garlic and ginger, minced"
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
     ],
     "instructions": [
-      "Heat oil in a pan and sauté garlic and ginger for 1 minute.",
-      "Add all vegetables and stir fry for 5-7 minutes.",
-      "Add soy sauce and cook for another 2 minutes.",
-      "Serve hot with or without rice."
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
     ]
   },
   {
@@ -67,60 +55,356 @@
     "calories": 320,
     "nutritionInfo": "Gluten-Free, High Fiber",
     "image": "https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg",
-    "description": "A light and nutritious quinoa salad loaded with fiber and fresh vegetables.",
+    "description": "Protein-packed quinoa mixed with veggies and herbs, ideal for gluten-free diets.",
     "ingredients": [
-      "1 cup cooked quinoa",
-      "1/2 cucumber, diced",
-      "1/4 cup cherry tomatoes, halved",
-      "2 tbsp chopped parsley",
-      "1 tbsp olive oil",
-      "1 tsp lemon juice",
-      "Salt and pepper"
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
     ],
     "instructions": [
-      "In a large bowl, mix quinoa, cucumber, tomatoes, and parsley.",
-      "Add olive oil and lemon juice.",
-      "Season with salt and pepper.",
-      "Toss everything together and serve chilled."
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
     ]
   },
   {
     "title": "Fruit Smoothie",
     "calories": 180,
     "nutritionInfo": "Rich in Vitamins",
-    "image": "https://images.pexels.com/photos/4040660/pexels-photo-4040660.jpeg",
-    "description": "A refreshing fruit smoothie rich in vitamins and antioxidants.",
+    "image": "https://tse2.mm.bing.net/th?id=OIP.KqSbyM2MNxzecYhp2_p1DwHaLH&pid=Api&P=0&h=180",
+    "description": "A refreshing blend of seasonal fruits loaded with vitamins and antioxidants.",
     "ingredients": [
-      "1 banana",
-      "1/2 cup strawberries",
-      "1/2 cup blueberries",
-      "1/2 cup Greek yogurt",
-      "1/2 cup almond milk",
-      "1 tsp honey (optional)"
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
     ],
     "instructions": [
-      "Add all ingredients to a blender.",
-      "Blend until smooth.",
-      "Pour into a glass and serve immediately."
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
     ]
   },
   {
     "title": "Grilled Salmon",
     "calories": 500,
     "nutritionInfo": "Omega-3 Rich, Protein Packed",
-    "image": "https://images.pexels.com/photos/3296273/pexels-photo-3296273.jpeg",
-    "description": "Delicious grilled salmon rich in omega-3 fatty acids and protein. Perfect for muscle recovery.",
+    "image": "https://realhousemoms.com/wp-content/uploads/Hawaiian-Grilled-Salmon-Filets-IG.jpg",
+    "description": "Juicy salmon fillet grilled to perfection, packed with omega-3 and protein.",
     "ingredients": [
-      "1 salmon fillet (about 200g)",
-      "1 tbsp olive oil",
-      "1 tsp lemon juice",
-      "Salt, pepper, and herbs of your choice"
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
     ],
     "instructions": [
-      "Preheat grill to medium-high heat.",
-      "Brush salmon with olive oil, lemon juice, salt, and herbs.",
-      "Grill skin-side down for 5-6 minutes, then flip and grill 3-4 minutes more.",
-      "Serve with steamed vegetables or a salad."
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Tofu Buddha Bowl",
+    "calories": 400,
+    "nutritionInfo": "Vegan, High Fiber",
+    "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
+    "description": "Tofu, brown rice, and veggies in a nourishing vegan bowl.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Turkey Wrap",
+    "calories": 380,
+    "nutritionInfo": "High Protein, Low Carb",
+    "image": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg",
+    "description": "Whole wheat wrap filled with lean turkey, greens, and hummus.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Greek Yogurt Parfait",
+    "calories": 300,
+    "nutritionInfo": "Muscle Gain, High Protein",
+    "image": "https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg",
+    "description": "Layers of Greek yogurt, fruits, and granola. Great for protein and muscle gain.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Kale and Quinoa Bowl",
+    "calories": 320,
+    "nutritionInfo": "Weight Loss, Vegan",
+    "image": "https://images.pexels.com/photos/1640778/pexels-photo-1640778.jpeg",
+    "description": "Nutrient-rich kale paired with quinoa for a clean, green, and energizing meal.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Protein Pancakes",
+    "calories": 450,
+    "nutritionInfo": "Muscle Gain, High Protein",
+    "image": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg",
+    "description": "Delicious pancakes made with whey protein and oats, ideal post-workout breakfast.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Zucchini Noodles",
+    "calories": 260,
+    "nutritionInfo": "Low Carb, Gluten-Free",
+    "image": "https://images.pexels.com/photos/551997/pexels-photo-551997.jpeg",
+    "description": "Spiralized zucchini with garlic olive oil and cherry tomatoes.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Lentil Soup",
+    "calories": 290,
+    "nutritionInfo": "Vegan, High Fiber",
+    "image": "https://images.pexels.com/photos/1640779/pexels-photo-1640779.jpeg",
+    "description": "Hearty soup made with lentils, tomatoes, and spices, packed with fiber and iron.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Egg White Omelette",
+    "calories": 220,
+    "nutritionInfo": "High Protein, Low Fat",
+    "image": "https://images.pexels.com/photos/1025804/pexels-photo-1025804.jpeg",
+    "description": "Fluffy egg white omelet filled with spinach, onions, and bell peppers.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Chickpea Salad",
+    "calories": 310,
+    "nutritionInfo": "Vegan, Weight Loss",
+    "image": "https://images.pexels.com/photos/1640775/pexels-photo-1640775.jpeg",
+    "description": "Chickpeas tossed with cucumbers, herbs, and lemon \u2014 light and refreshing.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Brown Rice and Beans",
+    "calories": 430,
+    "nutritionInfo": "Muscle Gain, Vegan Protein",
+    "image": "https://images.pexels.com/photos/3298632/pexels-photo-3298632.jpeg",
+    "description": "A powerful combination of brown rice and black beans for slow carbs and plant protein.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Baked Sweet Potato",
+    "calories": 270,
+    "nutritionInfo": "Weight Loss, High Fiber",
+    "image": "https://images.pexels.com/photos/5560783/pexels-photo-5560783.jpeg",
+    "description": "Roasted sweet potato topped with Greek yogurt and cinnamon.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Chicken Fajita Bowl",
+    "calories": 470,
+    "nutritionInfo": "High Protein, Low Carb",
+    "image": "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg",
+    "description": "Grilled chicken strips, saut\u00e9ed peppers, and cauliflower rice in one sizzling bowl.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Berry Chia Pudding",
+    "calories": 200,
+    "nutritionInfo": "Vegan, Omega-3",
+    "image": "https://images.pexels.com/photos/1435893/pexels-photo-1435893.jpeg",
+    "description": "Chia seeds soaked overnight in almond milk and topped with fresh berries.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Oats Banana Shake",
+    "calories": 350,
+    "nutritionInfo": "Muscle Gain, Healthy Fats",
+    "image": "https://images.pexels.com/photos/1435892/pexels-photo-1435892.jpeg",
+    "description": "Banana blended with oats, peanut butter, and milk \u2014 great for bulking.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Shrimp Avocado Bowl",
+    "calories": 480,
+    "nutritionInfo": "Protein Packed, Keto Friendly",
+    "image": "https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg",
+    "description": "Grilled shrimp over avocado, cucumbers, and olive oil drizzle.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Mixed Veggie Soup",
+    "calories": 190,
+    "nutritionInfo": "Vegan, Low Calorie",
+    "image": "https://images.pexels.com/photos/6287767/pexels-photo-6287767.jpeg",
+    "description": "Low-calorie soup filled with seasonal vegetables, perfect for detox.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Tofu Stir Fry",
+    "calories": 350,
+    "nutritionInfo": "Vegan, Muscle Gain",
+    "image": "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg",
+    "description": "Tofu cubes stir-fried with broccoli, bell peppers, and sesame oil.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
+    ]
+  },
+  {
+    "title": "Egg and Avocado Wrap",
+    "calories": 330,
+    "nutritionInfo": "Healthy Fats, High Protein",
+    "image": "https://i.pinimg.com/originals/b3/db/32/b3db3268d7e7154e273106e008909bb4.jpg",
+    "description": "Scrambled eggs and creamy avocado wrapped in a whole grain tortilla.",
+    "ingredients": [
+      "Ingredient 1 - quantity",
+      "Ingredient 2 - quantity",
+      "Ingredient 3 - quantity"
+    ],
+    "instructions": [
+      "Step 1: Prepare ingredients.",
+      "Step 2: Cook as required.",
+      "Step 3: Serve hot and enjoy."
     ]
   }
 ]

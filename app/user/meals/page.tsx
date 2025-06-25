@@ -49,7 +49,6 @@ export default function MealsPage() {
     };
 
     fetchMeals();
-
     const stored = localStorage.getItem("favorites");
     if (stored) setFavorites(JSON.parse(stored));
   }, []);
@@ -85,26 +84,24 @@ export default function MealsPage() {
 
   return (
     <main className="min-h-screen px-6 py-10 bg-green-50 text-black">
-      <h1 className="text-4xl font-bold text-center text-green-700 mb-6">
-        Discover Healthy & Delicious Meals
+      <h1 className="text-4xl font-bold text-center text-green-700 mb-8">
+        Discover Healthy & Delicious Meals 🍽️
       </h1>
 
       {/* AI Recommendations */}
-      <div className="bg-white p-6 rounded-xl shadow-lg mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-slate-800">Get AI-Powered Meal Recommendations</h2>
+      <section className="bg-white p-6 rounded-xl shadow-lg mb-10">
+        <h2 className="text-2xl font-bold mb-4 text-green-700">🔍 AI Meal Recommendations</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
           <select className="px-4 py-2 border rounded-md" value={goal} onChange={(e) => setGoal(e.target.value)}>
             <option value="">Select Goal</option>
             <option value="Weight Loss">Weight Loss</option>
             <option value="Muscle Gain">Muscle Gain</option>
           </select>
-
           <select className="px-4 py-2 border rounded-md" value={diet} onChange={(e) => setDiet(e.target.value)}>
             <option value="">Select Diet Type</option>
             <option value="Vegan">Vegan</option>
             <option value="Low Carb">Low Carb</option>
           </select>
-
           <div className="flex gap-2">
             <input
               type="number"
@@ -122,9 +119,8 @@ export default function MealsPage() {
             />
           </div>
         </div>
-
         <button
-          className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+          className="mt-2 px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
           onClick={async () => {
             try {
               const res = await fetch("/api/meals/recommend", {
@@ -145,11 +141,11 @@ export default function MealsPage() {
             }
           }}
         >
-          Recommend Meals
+          🔮 Recommend Meals
         </button>
-      </div>
+      </section>
 
-      {/* Filters */}
+      {/* Filter Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
         <select
           className="px-4 py-2 rounded-md border border-slate-300 shadow-sm"
@@ -162,7 +158,6 @@ export default function MealsPage() {
             </option>
           ))}
         </select>
-
         <select
           className="px-4 py-2 rounded-md border border-slate-300 shadow-sm"
           onChange={(e) => {
@@ -176,7 +171,6 @@ export default function MealsPage() {
           <option value="Vegan">Vegan</option>
           <option value="Low Carb">Low Carb</option>
         </select>
-
         <input
           type="text"
           placeholder="Search by name..."
@@ -192,7 +186,7 @@ export default function MealsPage() {
           className="px-5 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
           onClick={() => setShowFavorites(!showFavorites)}
         >
-          {showFavorites ? "Show All Meals" : "Show Favorites"}
+          {showFavorites ? "Show All Meals" : "💚 Show Favorites"}
         </button>
       </div>
 
@@ -205,7 +199,7 @@ export default function MealsPage() {
             {paginatedMeals.map((meal) => (
               <div
                 key={meal._id}
-                className="relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"
+                className="relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition"
               >
                 <img
                   src={meal.image || "/images/default-meal.jpg"}
@@ -215,7 +209,6 @@ export default function MealsPage() {
                   alt={meal.title}
                   className="w-full h-56 object-cover"
                 />
-
                 <button
                   onClick={() =>
                     setFavorites((prev) =>
@@ -226,7 +219,6 @@ export default function MealsPage() {
                 >
                   {favorites.includes(meal._id!) ? "💚" : "🤍"}
                 </button>
-
                 <div className="p-5">
                   <h3 className="text-xl font-semibold text-slate-800">{meal.title}</h3>
                   <p className="text-slate-600 mt-2">{meal.calories} kcal • {meal.nutritionInfo}</p>
@@ -235,7 +227,7 @@ export default function MealsPage() {
                     className="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition w-full"
                     onClick={() => setSelectedMeal(meal)}
                   >
-                    View Recipe
+                    🍽️ View Recipe
                   </button>
                 </div>
               </div>
@@ -281,7 +273,7 @@ export default function MealsPage() {
         </>
       )}
 
-      {/* Modal */}
+      {/* Modal for Meal Details */}
       {selectedMeal && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center">
           <div className="bg-white w-[90%] max-w-xl rounded-lg shadow-lg p-6 text-black relative overflow-y-auto max-h-[90vh]">
@@ -291,7 +283,6 @@ export default function MealsPage() {
             >
               ✖
             </button>
-
             <img src={selectedMeal.image} alt={selectedMeal.title} className="w-full h-60 object-cover rounded-md mb-4" />
             <h2 className="text-2xl font-bold mb-2">{selectedMeal.title}</h2>
             <p className="text-gray-700 mb-1"><strong>Calories:</strong> {selectedMeal.calories}</p>
@@ -301,8 +292,8 @@ export default function MealsPage() {
 
             {selectedMeal.ingredients && (
               <>
-                <h3 className="text-lg font-semibold mt-4 mb-2">Ingredients:</h3>
-                <ul className="list-disc list-inside text-sm text-gray-700">
+                <h3 className="text-lg font-semibold mt-4 mb-2">🥦 Ingredients</h3>
+                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
                   {selectedMeal.ingredients.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
@@ -312,7 +303,7 @@ export default function MealsPage() {
 
             {selectedMeal.instructions && (
               <>
-                <h3 className="text-lg font-semibold mt-4 mb-2">Instructions:</h3>
+                <h3 className="text-lg font-semibold mt-4 mb-2">👨‍🍳 Instructions</h3>
                 <ol className="list-decimal list-inside text-sm text-gray-700 space-y-1">
                   {selectedMeal.instructions.map((step, index) => (
                     <li key={index}>{step}</li>

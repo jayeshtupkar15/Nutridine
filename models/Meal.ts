@@ -1,14 +1,13 @@
 import mongoose from "mongoose";
 
-const MealSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  calories: { type: Number, required: true },
-  nutritionInfo: { type: String, required: true },
-  image: { type: String, required: true },
-  category: { type: String },
-  description: { type: String },
-  ingredients: [{ type: String }],
-  instructions: [{ type: String }]
+const mealSchema = new mongoose.Schema({
+  title: String,
+  calories: Number,
+  nutritionInfo: String,
+  image: String,
+  description: String,
+  ingredients: [String],
+  instructions: [String],
 });
 
-export default mongoose.models.Meal || mongoose.model("Meal", MealSchema);
+export default mongoose.models.Meal || mongoose.model("Meal", mealSchema);

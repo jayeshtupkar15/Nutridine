@@ -1,4 +1,5 @@
 // scripts/seedMeals.ts
+
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import connectDB from "../lib/mongodb";
@@ -10,10 +11,15 @@ dotenv.config();
 const seedMeals = async () => {
   try {
     await connectDB();
-    await Meal.deleteMany(); // Optional: Clean existing data
+
+    // Clear existing meals
+    await Meal.deleteMany({});
     const inserted = await Meal.insertMany(mealsData);
+
     console.log(`✅ Successfully seeded ${inserted.length} meals.`);
+
     mongoose.connection.close();
+    process.exit(0);
   } catch (error) {
     console.error("❌ Seeding failed:", error);
     mongoose.connection.close();
