@@ -25,6 +25,7 @@ export default function MealsPage() {
   const [favorites, setFavorites] = useState<string[]>([]);
   const [showFavorites, setShowFavorites] = useState(false);
   const [selectedMeal, setSelectedMeal] = useState<Meal | null>(null);
+  const [viewImageUrl, setViewImageUrl] = useState<string | null>(null);
 
   const [goal, setGoal] = useState("");
   const [diet, setDiet] = useState("");
@@ -153,9 +154,7 @@ export default function MealsPage() {
           onChange={(e) => setSelectedCategory(e.target.value)}
         >
           {categories.map((cat) => (
-            <option key={cat} value={cat}>
-              {cat}
-            </option>
+            <option key={cat} value={cat}>{cat}</option>
           ))}
         </select>
         <select
@@ -180,7 +179,7 @@ export default function MealsPage() {
         />
       </div>
 
-      {/* Favorites Toggle */}
+      {/* Toggle Favorites */}
       <div className="flex justify-end mb-6">
         <button
           className="px-5 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
@@ -203,11 +202,9 @@ export default function MealsPage() {
               >
                 <img
                   src={meal.image || "/images/default-meal.jpg"}
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = "/images/default-meal.jpg";
-                  }}
                   alt={meal.title}
-                  className="w-full h-56 object-cover"
+                  onClick={() => setViewImageUrl(meal.image)}
+                  className="cursor-zoom-in w-full h-56 object-cover"
                 />
                 <button
                   onClick={() =>
@@ -273,7 +270,7 @@ export default function MealsPage() {
         </>
       )}
 
-      {/* Modal for Meal Details */}
+      {/* Meal Detail Modal */}
       {selectedMeal && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center">
           <div className="bg-white w-[90%] max-w-xl rounded-lg shadow-lg p-6 text-black relative overflow-y-auto max-h-[90vh]">
@@ -289,29 +286,20 @@ export default function MealsPage() {
             <p className="text-gray-700 mb-1"><strong>Nutrition:</strong> {selectedMeal.nutritionInfo}</p>
             {selectedMeal.category && <p className="text-green-600 font-medium mb-3">{selectedMeal.category}</p>}
             <p className="text-gray-600 mb-4">{selectedMeal.description}</p>
-
-            {selectedMeal.ingredients && (
-              <>
-                <h3 className="text-lg font-semibold mt-4 mb-2">🥦 Ingredients</h3>
-                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-                  {selectedMeal.ingredients.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </>
-            )}
-
-            {selectedMeal.instructions && (
-              <>
-                <h3 className="text-lg font-semibold mt-4 mb-2">👨‍🍳 Instructions</h3>
-                <ol className="list-decimal list-inside text-sm text-gray-700 space-y-1">
-                  {selectedMeal.instructions.map((step, index) => (
-                    <li key={index}>{step}</li>
-                  ))}
-                </ol>
-              </>
-            )}
           </div>
+        </div>
+      )}
+
+      {/* Fullscreen Image Viewer */}
+      {viewImageUrl && (
+        <div className="fixed inset-0 z-[100] bg-black bg-opacity-90 flex items-center justify-center">
+          <button
+            className="absolute top-5 right-5 text-white text-3xl hover:text-red-400"
+            onClick={() => setViewImageUrl(null)}
+          >
+            ✖
+          </button>
+          <img src={viewImageUrl} alt="Full Meal View" className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-lg" />
         </div>
       )}
     </main>
