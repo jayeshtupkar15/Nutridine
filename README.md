@@ -28,4 +28,9 @@
 ---
 
 ## 📦 Project Structure
+## 🎥 Project Demo
+
+<video src="public/DemoVideo.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
 
